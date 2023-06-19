@@ -1,0 +1,15 @@
+
+resources:
+- ../../../base/falcon-container
+
+images:
+- name: falcon-sensor
+  newName: CHANGE_ME_TO_YOUR_REGISTRY/YOUR_SENSOR_IMAGE
+  newTag: CHANGE_ME_TO_YOUR_TAG
+
+configMapGenerator:
+- name: falcon-helm-falcon-sensor-config
+  namespace: falcon-system
+  behavior: merge
+  literals:
+  - FALCON_IMAGE="CHANGE_ME_TO_YOUR_REGISTRY/YOUR_SENSOR_IMAGE:CHANGE_ME_TO_YOUR_TAG"
