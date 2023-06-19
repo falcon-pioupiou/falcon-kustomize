@@ -1,0 +1,12 @@
+
+resources:
+- ../../../base/kpa-with-proxy
+
+
+# The cluster name must be unique per cluster
+configMapGenerator:
+- name: kpagent-cs-k8s-protection-agent
+  namespace: falcon-kubernetes-protection
+  behavior: merge
+  literals:
+  - AGENT_CLUSTER_NAME="CHANGE_ME_TO_YOUR_CLUSTER_NAME"

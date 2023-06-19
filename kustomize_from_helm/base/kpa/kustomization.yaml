@@ -1,0 +1,24 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+resources:
+- namespace_creation.yaml
+
+namespace: falcon-kubernetes-protection
+
+helmCharts:
+- name: cs-k8s-protection-agent
+  repo: https://registry.crowdstrike.com/kpagent-helm
+  version: v0.917.0
+  releaseName: kpagent
+  namespace: falcon-kubernetes-protection
+  valuesInline:
+    crowdstrikeConfig:
+      clientID: "CHANGE_ME_WITH_YOUR_FALCON_CLIENT_ID"
+      clientSecret: "CHANGE_ME_WITH_YOUR_FALCON_CLIENT_SECRET"
+      clusterName: CHANGE_ME_DEFAULT_CLUSTER_NAME
+      env: CHANGE_ME_TO_YOUR_CROWDSTRIKE_CLOUD
+      cid: CHANGE_ME_WITH_CID_WITHOUT_CHECKSUM
+      dockerAPIToken: CHANGE_ME_WITH_DOCKER_API_TOKEN
+
+
