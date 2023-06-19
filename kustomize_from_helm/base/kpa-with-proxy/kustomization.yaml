@@ -1,0 +1,14 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+resources:
+- ../kpa
+
+configMapGenerator:
+- name: kpagent-cs-k8s-protection-agent
+  namespace: falcon-kubernetes-protection
+  behavior: merge
+  literals:
+  - HTTP_PROXY="http://CHANGE_ME_WITH_PROXY_IP:CHANGE_ME_WITH_PROXY_PORT"
+  - HTTPS_PROXY="http://CHANGE_ME_WITH_PROXY_IP:CHANGE_ME_WITH_PROXY_PORT"
+  - NO_PROXY="localhost,10.0.0.0/8,172.16.0.0/12,192.168.0.0/16"
