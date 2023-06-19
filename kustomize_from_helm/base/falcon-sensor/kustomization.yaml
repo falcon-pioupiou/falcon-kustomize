@@ -1,0 +1,17 @@
+resources:
+- namespace_creation.yaml
+
+helmCharts:
+- name: falcon-sensor
+  repo: https://crowdstrike.github.io/falcon-helm
+  version: v1.19.1
+  releaseName: falcon-helm
+  namespace: falcon-system
+  skipHooks: true
+  valuesInline:
+    falcon:
+      cid: "00001111222233334444555566667777-12"
+      tags: ""
+    node:
+      enabled: true
+      backend: "kernel"

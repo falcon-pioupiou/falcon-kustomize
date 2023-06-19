@@ -1,0 +1,8 @@
+
+resources:
+- ../../../base/falcon-sensor
+
+images:
+- name: falcon-node-sensor
+  newName: CHANGE_ME_TO_YOUR_REGISTRY/YOUR_SENSOR_IMAGE
+  newTag: CHANGE_ME_TO_YOUR_TAG
