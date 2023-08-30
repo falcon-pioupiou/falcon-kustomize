@@ -1,6 +1,6 @@
 
 resources:
-- ../../../base/kpa-with-proxy
+- ../../../base/kpa
 
 
 # The cluster name must be unique per cluster
@@ -10,3 +10,4 @@ configMapGenerator:
   behavior: merge
   literals:
   - AGENT_CLUSTER_NAME="CHANGE_ME_TO_YOUR_CLUSTER_NAME"
+  
