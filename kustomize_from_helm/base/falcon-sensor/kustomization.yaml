@@ -4,7 +4,7 @@ resources:
 helmCharts:
 - name: falcon-sensor
   repo: https://crowdstrike.github.io/falcon-helm
-  version: v1.19.1
+  version: v1.20.3
   releaseName: falcon-helm
   namespace: falcon-system
   skipHooks: true

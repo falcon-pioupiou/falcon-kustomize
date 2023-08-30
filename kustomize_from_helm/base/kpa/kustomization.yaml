@@ -9,7 +9,7 @@ namespace: falcon-kubernetes-protection
 helmCharts:
 - name: cs-k8s-protection-agent
   repo: https://registry.crowdstrike.com/kpagent-helm
-  version: v0.917.0
+  version: v0.1473.0
   releaseName: kpagent
   namespace: falcon-kubernetes-protection
   valuesInline:
