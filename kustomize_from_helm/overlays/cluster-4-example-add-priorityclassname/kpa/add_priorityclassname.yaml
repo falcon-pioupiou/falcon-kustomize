@@ -1,0 +1,4 @@
+
+- op: replace # action
+  path: /spec/template/spec/priorityClassName # resource we want to change
+  value: high-priority # value we want to use for patching
