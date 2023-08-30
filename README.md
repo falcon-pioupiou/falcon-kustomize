@@ -7,7 +7,7 @@ Then use Kustomize on generated files.
 
 ## From Helm
 
-This method is using the Helm Infration Generator.
+This method is using the Helm Inflation Generator.
 - [HelmChartInflationGenerator Doc](https://kubectl.docs.kubernetes.io/references/kustomize/builtins/#_helmchartinflationgenerator_)
 - [Kubernetes Sigs Kustomize Doc](https://github.com/kubernetes-sigs/kustomize/blob/master/examples/chart.md)
 
